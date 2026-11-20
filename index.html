@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex portfolio site</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Alex Styles</h1>
+        <nav aria-label="Main navigation">
+            <a href="#about" data-tooltip="Learn about Alex">About Me</a>
+            <a href="#portfolio" data-tooltip="Explore Alex's work">Portfolio</a>
+            <a href="#contact" data-tooltip="Get in touch with Alex">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Alex Styles is a creative professional with experience in design,
+                development, and visual communication. Brief introduction to Alex's
+                background and skills.
+            </p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="project-grid">
+                <article>
+                    <img src="project-one-thumbnail.jpg" alt="Project One thumbnail">
+                    <div class="project-card-content">
+                        <h3>Project One</h3>
+                        <p>A sample project showcasing Alex's creative process.</p>
+                        <button class="project-details-trigger" type="button"
+                            data-dialog-target="project-one-dialog" aria-haspopup="dialog"
+                            aria-controls="project-one-dialog">View details</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="project-two-thumbnail.jpg" alt="Project Two thumbnail">
+                    <div class="project-card-content">
+                        <h3>Project Two</h3>
+                        <p>A sample project focused on thoughtful visual design.</p>
+                        <button class="project-details-trigger" type="button"
+                            data-dialog-target="project-two-dialog" aria-haspopup="dialog"
+                            aria-controls="project-two-dialog">View details</button>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="project-three-thumbnail.jpg" alt="Project Three thumbnail">
+                    <div class="project-card-content">
+                        <h3>Project Three</h3>
+                        <p>A sample project bringing design and development together.</p>
+                        <button class="project-details-trigger" type="button"
+                            data-dialog-target="project-three-dialog" aria-haspopup="dialog"
+                            aria-controls="project-three-dialog">View details</button>
+                    </div>
+                </article>
+            </div>
+
+            <dialog class="project-dialog" id="project-one-dialog"
+                aria-labelledby="project-one-title">
+                <div class="dialog-header">
+                    <h2 id="project-one-title">Project One</h2>
+                    <button class="dialog-close" type="button" data-dialog-close
+                        aria-label="Close project details">Close</button>
+                </div>
+                <p>A detailed overview of Project One, including its goals, Alex's role,
+                    and the creative decisions behind the final result.</p>
+            </dialog>
+
+            <dialog class="project-dialog" id="project-two-dialog"
+                aria-labelledby="project-two-title">
+                <div class="dialog-header">
+                    <h2 id="project-two-title">Project Two</h2>
+                    <button class="dialog-close" type="button" data-dialog-close
+                        aria-label="Close project details">Close</button>
+                </div>
+                <p>A detailed overview of Project Two, describing the design approach,
+                    tools used, and the outcome for the project.</p>
+            </dialog>
+
+            <dialog class="project-dialog" id="project-three-dialog"
+                aria-labelledby="project-three-title">
+                <div class="dialog-header">
+                    <h2 id="project-three-title">Project Three</h2>
+                    <button class="dialog-close" type="button" data-dialog-close
+                        aria-label="Close project details">Close</button>
+                </div>
+                <p>A detailed overview of Project Three, highlighting the process,
+                    collaboration, and final deliverables.</p>
+            </dialog>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Alex Styles</p>
+    </footer>
+</body>
+</html>
